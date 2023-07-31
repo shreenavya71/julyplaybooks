@@ -1,0 +1,14 @@
+---
+- name: In this playbook we are going to install and starting the httpd service
+  hosts: all
+  become: true
+  tasks:
+    - name: installing httpd service
+      yum:
+        name: httpd
+        state: installed
+
+    - name: starting the service
+      service:
+        name: httpd
+        state: started

@@ -1,0 +1,12 @@
+---
+- name: this is a test playbook for copying a file
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: coping a file
+      copy:
+        src: /home/ansadmin/index.html
+        dest: /home/ansadmin/
+        mode: 0666
+        owner: Navya
+

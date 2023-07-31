@@ -1,0 +1,14 @@
+---
+- name: In this playbook we are going to uninstall and stoping the httpd service
+  hosts: all
+  become: true
+  tasks:
+    - name: stopping the httpd service
+      service:
+        name: httpd
+        state: stopped
+
+    - name: uninstalling httpd service
+      yum:
+        name: httpd
+        state: removed

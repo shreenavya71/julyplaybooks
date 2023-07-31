@@ -1,0 +1,9 @@
+---
+- name: this is playbook for vault
+  hosts: all
+  become: yes
+  tasks:
+    - name: creating a user
+      user:
+        name: rajesh
+

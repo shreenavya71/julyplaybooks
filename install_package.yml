@@ -1,0 +1,10 @@
+---
+- name: This is a test playbook for installing a package
+  hosts: webservers
+  become: true
+  tasks:
+    - name: installing a package
+      yum:
+        name: git
+        state: installed
+    

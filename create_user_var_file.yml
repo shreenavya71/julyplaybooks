@@ -1,0 +1,13 @@
+---
+- name: this is a playbook for creating a users using variables in a separate file
+  hosts: all
+  become: yes
+  vars_files:
+    - users.yml
+  tasks:
+    - name: creating user {{user1}}
+      user:
+        name: "{{user1}}"
+    - name: creating user {{user2}}
+      user:
+        name: "{{user2}}"
